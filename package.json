@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js",
-    "test": "node --test",
-    "lint": "eslint ."
-    
+  "start": "cross-env NODE_ENV=production node index.js",
+  "dev": "cross-env NODE_ENV=development nodemon index.js",
+  "test": "cross-env NODE_ENV=test node --test"
   },
   "author": "Awais Baig",
   "license": "MIT",
@@ -21,6 +19,9 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@stylistic/eslint-plugin": "^5.6.1",
-    "eslint": "^9.39.1"
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.1",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.1.4"
   }
 }
